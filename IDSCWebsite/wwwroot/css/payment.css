@@ -1,0 +1,74 @@
+﻿/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    background-color: #fff;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Fieldsets and Legends */
+fieldset {
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 0 10px;
+}
+
+/* Form Grouping */
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .form-group input[type="number"],
+    .form-group input[type="text"] {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #bbb;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+/* Button Styling */
+button[type="submit"] {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+}
+
+    button[type="submit"]:hover {
+        background-color: #1e8449;
+    }

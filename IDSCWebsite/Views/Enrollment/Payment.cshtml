@@ -1,0 +1,34 @@
+﻿@model SharedLibraries.Models.Payment
+@{
+    Layout = null;
+    ViewData["Title"] = "Payment";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/css/payment.css" />
+</head>
+<body>
+    <div class="form-container">
+        <h2>Payment Details</h2>
+        <form asp-action="Payment" method="post">
+            @Html.AntiForgeryToken()
+
+            <fieldset>
+                <legend>Down Payment</legend>
+                <div class="form-group">
+                    <label for="Payment_Ammount">Down Payment Amount</label>
+                    <input type="number" id="Payment_Ammount" name="Payment_Ammount" asp-for="Payment_Ammount" placeholder="Enter payment amount" step="0.01" />
+                    @Html.ValidationMessageFor(model => model.Payment_Ammount)
+                </div>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+

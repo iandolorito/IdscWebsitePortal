@@ -1,0 +1,165 @@
+﻿@model SharedLibraries.Models.Student
+@{
+    Layout = null;
+    ViewData["Title"] = "Student Enrollment Form";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/css/enrollment.css" />
+</head>
+<body>
+    <div class="form-container">
+        <h2>STUDENT ENROLLMENT FORM</h2>
+        <form asp-action="Index" method="post">
+            @Html.AntiForgeryToken()
+
+            <!-- Student Information -->
+            <fieldset>
+                <legend>Student Information</legend>
+                <div class="form-group">
+                    <label for="Admission">Admission for</label>
+                    <select id="Admission" name="Admission" asp-for="Admission">
+
+                        <option value="New Student">New Student</option>
+                        <option value="Transferee">Transferee</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="FirstName">First Name</label>
+                    <input type="text" id="FirstName" name="FirstName" asp-for="FirstName" placeholder="First Name" />
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" asp-for="lastName" placeholder="Last Name" />
+                </div>
+                <div class="form-group">
+                    <label for="MI">Middle Initial</label>
+                    <input type="text" id="MI" name="MI" asp-for="MI" placeholder="M.I." />
+                </div>
+                <div class="form-group">
+                    <label for="Age">Age</label>
+                    <input type="number" id="Age" name="Age" asp-for="Age" placeholder="Age" />
+                </div>
+                <div class="form-group">
+                    <label>Sex</label>
+                    <label class="radio-inline">
+                        <input type="radio" name="Sex" value="Male" asp-for="Sex" /> Male
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="Sex" value="Female" asp-for="Sex" /> Female
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="Birthday">Birthday</label>
+                    <input type="date" id="Birthday" name="Birthday" asp-for="Birthday" />
+                </div>
+                <div class="form-group">
+                    <label for="BirthPlace">Birth Place</label>
+                    <input type="text" id="BirthPlace" name="BirthPlace" asp-for="BirthPlace" placeholder="Birth Place" />
+                </div>
+                <div class="form-group">
+                    <label for="Nationality">Nationality</label>
+                    <input type="text" id="Nationality" name="Nationality" asp-for="Nationality" placeholder="Nationality" />
+                </div>
+                <div class="form-group">
+                    <label for="ContactNo">Contact No</label>
+                    <input type="text" id="ContactNo" name="ContactNo" asp-for="ContactNo" placeholder="Contact Number" />
+                </div>
+                <div class="form-group">
+                    <label for="Religion">Religion</label>
+                    <input type="text" id="Religion" name="Religion" asp-for="Religion" placeholder="Religion" />
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email Address</label>
+                    <input type="email" id="Email" name="Email" asp-for="Email" placeholder="Email Address" />
+                </div>
+                <div class="form-group">
+                    <label for="CivilStatus">Civil Status</label>
+                    <select id="CivilStatus" name="CivilStatus" asp-for="CivilStatus">
+                        
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="UserName">User Name</label>
+                    <input type="text" id="UserName" name="UserName" asp-for="UserName" placeholder="User Name" />
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" id="Password" name="Password" asp-for="Password" placeholder="Password" />
+                </div>
+            </fieldset>
+
+            <!-- Parent/Guardian Information -->
+            <fieldset>
+                <legend>Parent/Guardian Information</legend>
+                <div class="form-group">
+                    <label for="Parents_Guardian">Parent/Guardian</label>
+                    <input type="text" id="Parents_Guardian" name="Parents_Guardian" asp-for="Parents_Guardian" placeholder="Parent/Guardian Name" />
+                </div>
+                <div class="form-group">
+                    <label for="Relationship_to_Student">Relationship to Student</label>
+                    <input type="text" id="Relationship_to_Student" name="Relationship_to_Student" asp-for="Relationship_to_Student" placeholder="Relationship" readonly />
+                </div>
+                <div class="form-group">
+                    <label for="Phone_Number">Phone Number</label>
+                    <input type="text" id="Phone_Number" name="Phone_Number" asp-for="Phone_Number" placeholder="Parent/Guardian Contact" />
+                </div>
+            </fieldset>
+
+            <!-- Academic Information -->
+            <fieldset>
+                <legend>Academic Information</legend>
+                <div class="form-group">
+                    <label for="School_Graduated">School Graduated</label>
+                    <input type="text" id="School_Graduated" name="School_Graduated" asp-for="School_Graduated" placeholder="School Graduated" />
+                </div>
+                <div class="form-group">
+                    <label for="Year_Graduated">Year Graduated</label>
+                    <input type="text" id="Year_Graduated" name="Year_Graduated" asp-for="Year_Graduated" placeholder="Year Graduated" />
+                </div>
+                <div class="form-group">
+                    <label for="GWA">GWA</label>
+                    <input type="number" step="0.01" id="GWA" name="GWA" asp-for="GWA" placeholder="General Weighted Average" />
+                </div>
+                <!-- For transferees only -->
+                <div class="form-group">
+                    <label for="Name_of_School">Name of School (For Transferee)</label>
+                    <input type="text" id="Name_of_School" name="Name_of_School" asp-for="Name_of_School" placeholder="Previous School" />
+                </div>
+                <div class="form-group">
+                    <label for="Last_Year_Level">Last Year Level</label>
+                    <input type="text" id="Last_Year_Level" name="Last_Year_Level" asp-for="Last_Year_Level" placeholder="Last Year Level" />
+                </div>
+                <div class="form-group">
+                    <label for="Last_Year_Attended">Last Year Attended</label>
+                    <input type="text" id="Last_Year_Attended" name="Last_Year_Attended" asp-for="Last_Year_Attended" placeholder="Last Year Attended" />
+                </div>
+                <div class="form-group">
+                    <label for="Course_Strand">Course/Strand</label>
+                    <input type="text" id="Course_Strand" name="Course_Strand" asp-for="Course_Strand" placeholder="Course or Strand" />
+                </div>
+                <div class="form-group">
+                    <label for="School_Level">School Level</label>
+                    <input type="text" id="School_Level" name="School_Level" asp-for="School_Level" placeholder="School Level" />
+                </div>
+                <div class="form-group">
+                    <label for="Course_or_Strand">Course or Strand</label>
+                    <input type="text" id="Course_or_Strand" name="Course_or_Strand" asp-for="Course_or_Strand" placeholder="Course or Strand" />
+                </div>
+                <div class="form-group">
+                    <label for="Learners_Ref_No">Learner's Reference No.</label>
+                    <input type="text" id="Learners_Ref_No" name="Learners_Ref_No" asp-for="Learners_Ref_No" placeholder="Learner's Ref. No." />
+                </div>
+            </fieldset>
+
+            <button type="submit">Next</button>
+        </form>
+    </div>
+</body>
+</html>

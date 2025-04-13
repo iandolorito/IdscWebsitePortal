@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<body style="">
+    <div class="backgroudimage">
+        <section class="home-section">
+            <div class="para">
+                <h3 class="paragraph" style="color: black; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif">A variant community that fosters innovation, brings people together, and sparks a passion for learning</h3>
+            </div>
+
+            <div class="button-container">
+                <a class="home-box green" asp-area="" asp-controller="Enrollment" asp-action="Index">
+                    <div style="color: black;"><img src="~/images/Enrollment.png" style="height: 40px; width: 40px;" />ENROLLMENT</div>
+
+                </a>
+                <a class="home-box olive" asp-area="" asp-controller="Portal" asp-action="Index">
+                    <div class="icon-text" style="color: black;"><img src="~/images/Courses.png" style="height: 40px; width: 40px;" />COURSES</div>
+
+                </a>
+                <a class="home-box purple" asp-area="" asp-controller="Portal" asp-action="Index">
+                    <div class="icon-text" style="color: black;"><img src="~/images/Announcement.png" style="height: 40px; width: 40px;" />ANNOUNCEMENT</div>
+
+                </a>
+
+                <a class="home-box red" asp-area="" asp-controller="Portal" asp-action="Index">
+                    <div class="icon-text" style="color: black;"><img src="~/images/Alumni.png" style="height: 40px; width: 40px;" />ALUMNI</div>
+
+                </a>
+
+                <a class="home-box blue" asp-area="" asp-controller="Portal" asp-action="Index">
+                    <div class="icon-text" style="color: black;"><img src="~/images/Portals.png" style="height: 40px; width: 40px;" />PORTALS</div>
+
+                </a>
+
+
+            </div>
+
+        </section>
+    </div>
+
+    <section class="content-section" style="align-items: start;">
+        <div class="text-image">
+            <div class="text">
+                <p>
+                    Every year, the Information and Data Science Club (IDSC) brings excitement and unity to the campus by celebrating the much-anticipated Mr. and Mrs. IDSC during the Intramurals. This tradition showcases not only beauty and charm but also intelligence, confidence, and leadership among its participants.
+                </p>
+                <p>
+                    The Mr. and Mrs. IDSC pageant is more than just a competition—it's an opportunity for students to express themselves, build self-confidence, and represent the values of IDSC. Contestants go through different rounds, including talent performances, Q&A sessions, and themed fashion showcases, making the event both entertaining and inspiring.
+                </p>
+            </div>
+            <img class="imahe" src="~/images/mridsc.jpg" />
+        </div>
+
+        <div class="text-image">
+            <img class="imahe" src="~/images/yow.jpg" />
+            <div class="text">
+                <p>
+                    Every year, the Information and Data Science Club (IDSC) enthusiastically participates in the Intramurals, celebrating sportsmanship, teamwork, and athletic excellence. This annual event is a time for students to step away from their screens and showcase their physical skills, determination, and unity through various sports competitions.
+                </p>
+                <p>
+                    From basketball and volleyball to e-sports and chess, IDSC members compete with passion, proving that they excel not only in data and technology but also in sports and strategy. The event fosters camaraderie, friendly rivalry, and school spirit, strengthening bonds among students.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="map-section">
+        <img class="locate" src="~/images/location.png" />
+    </section>
+</body>

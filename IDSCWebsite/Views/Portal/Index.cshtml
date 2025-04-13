@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Portal Page";
+}
+
+<body class="portal-body" style="background-color: whitesmoke; height: 100%; width: 100vw; margin-top:150px; position: fixed;">
+    <div class="portal-page">
+        <img src="~/images/idsc.png" alt="Logo" style="width: 200px; height: 200px;" />
+        <a style="color: black; font-weight: bold;font-size:20px;text-align: center; font-family: Georgia, 'Times New Roman', Times, serif">INFOTECH DEVELOPMENT SYSTEM COLLEGES INC.<br>LIGAO, CITY</a>
+        <div class="portal-container">
+            <a class="portal-box green" asp-area="" asp-controller="Portal" asp-action="StudentLogin">
+                <div class="icon-test" style="color: black;"><img src="~/images/Student.png" style="height: 40px; width: 40px;" />STUDENT PORTAL</div>
+
+            </a>
+            <a class="portal-box green" asp-area="" asp-controller="Portal" asp-action="Index">
+                <div class="icon-test" style="color: black;"><img src="~/images/Admin.png" style="height: 40px; width: 40px;" />ADMIN PORTAL</div>
+
+            </a>
+            <a class="portal-box green" asp-area="" asp-controller="Portal" asp-action="Index">
+                <div class="icon-test" style="color: black;"><img src="~/images/Instructor.png" style="height: 40px; width: 40px;" />INSTRUCTOR PORTAL</div>
+
+            </a>
+
+        </div>
+    </div>
+
+
+</body>

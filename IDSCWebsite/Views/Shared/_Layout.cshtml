@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - IDSCWebsite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/IDSCWebsite.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="header-style">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  ">
+            <div class="container-fluid">
+                <img src="~/images/idsc.png" alt="Logo" class="navbar-brand" style="width: 90px; height: 90px; margin-left:10px; margin-right: 5px;" />
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: white; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif">INFOTECH DEVELOPMENT<br>SYSTEM COLLEGES INC.</a>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-2 ">
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index" style="color: white; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="About" style="color: white; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Contact" style="color: white; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Privacy" style="color: white; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; background-color: black; border-radius: 5px;">Enroll Now</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted ">
+        <section class="databelow">
+            <div class="Logo-text">
+                <img src="~/images/idsc.png" alt="Logo" class="below-logo" style="width: 100px; height: 100px;" />
+                <div class="below">
+                    <a style="color: white; font-weight: bold;font-size:15px; font-family: Georgia, 'Times New Roman', Times, serif">INFOTECH DEVELOPMENT<br>SYSTEM COLLEGES INC.</a>
+                    <div class="social-icons">
+                        <a href="#"><img src="~/images/Facebook.png" style="height: 20px; width: 20px;" /></a>
+                        <a href="#"><img src="~/images/YT.png" style="height: 20px; width: 20px;" /></a>
+                        <a href="#"><img src="~/images/Linked.png" style="height: 20px; width: 20px;" /></a>
+                        <a href="#"><img src="~/images/Insta.png" style="height: 20px; width: 20px;" /></a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
